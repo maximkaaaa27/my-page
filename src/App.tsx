@@ -1,26 +1,61 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import './App.scss';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
+import { CardAbout } from './component/CardAbout';
+import { NavbarComponent } from './component/Navbar';
+import { about } from './about/about';
+import { Skills } from './pages/Skills';
+import { Contacts } from './pages/Contacts';
 
 function App() {
+
+
+  const [value, setValue] = useState(localStorage.getItem('Language') || 'Rus');
+  if (!localStorage.getItem('Language')) localStorage.setItem('Language', 'Rus');
+
+  const handleLanguageChange = (val:string) => {
+    setValue(val);
+    localStorage.setItem('Language', val);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+
+     <NavbarComponent
+       languageChange={handleLanguageChange}
+       language={value}
+      />
+
+    <Switch>
+
+      <Route exact path='/'>
+        <CardAbout 
+          data={about}
+          language={value}
+          />
+      </Route>
+
+      <Route exact path='/skills'>
+        <Skills 
+          data={about}
+          language={value}
+        />
+      </Route>
+
+      <Route exact path='/contacts'>
+        <Contacts />
+      </Route>
+
+      </Switch>
+      <footer>
+        <p id="copyright"> Maksim Dryutov © 2021</p>
+      </footer>
+    </Router>
   );
-}
+};
 
 export default App;

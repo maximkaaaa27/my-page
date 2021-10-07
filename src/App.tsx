@@ -8,26 +8,31 @@ import {
 import { CardAbout } from './component/CardAbout';
 import { NavbarComponent } from './component/Navbar';
 import { about } from './about/about';
-import { Skills } from './pages/Skills';
-import { Contacts } from './pages/Contacts';
 
 function App() {
 
 
-  const [value, setValue] = useState(localStorage.getItem('Language') || 'Rus');
+  const [language, setLanguage] = useState(localStorage.getItem('Language') || 'Rus');
+  const [aboutMe, setAboutMe] = useState('skills');
+
   if (!localStorage.getItem('Language')) localStorage.setItem('Language', 'Rus');
 
   const handleLanguageChange = (val:string) => {
-    setValue(val);
+    setLanguage(val);
     localStorage.setItem('Language', val);
   };
+
+  const handleAboutMeChange = (val: string) => {
+    setAboutMe(val);
+  }
 
   return (
     <Router>
 
      <NavbarComponent
        languageChange={handleLanguageChange}
-       language={value}
+       aboutMeChange={handleAboutMeChange}
+       language={language}
       />
 
     <Switch>
@@ -35,19 +40,9 @@ function App() {
       <Route exact path='/'>
         <CardAbout 
           data={about}
-          language={value}
+          about={aboutMe}
+          language={language}
           />
-      </Route>
-
-      <Route exact path='/skills'>
-        <Skills 
-          data={about}
-          language={value}
-        />
-      </Route>
-
-      <Route exact path='/contacts'>
-        <Contacts />
       </Route>
 
       </Switch>

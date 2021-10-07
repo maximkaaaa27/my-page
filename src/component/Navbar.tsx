@@ -2,7 +2,11 @@ import React from 'react'
 import { Container, Navbar, Nav, ButtonGroup, ToggleButton } from 'react-bootstrap'
 
 
-type NavbarProps = { languageChange: (val: string) => void; language: string }
+type NavbarProps = { 
+  languageChange: (val: string) => void;
+  aboutMeChange: (val: string) => void; 
+  language: string 
+}
 
 
 export const NavbarComponent = (props: NavbarProps) => {
@@ -36,9 +40,11 @@ export const NavbarComponent = (props: NavbarProps) => {
 
       <Nav className="me-auto">
 
-        <Nav.Link href="/skills">{(props.language === 'Eng') ? navbarNames.Eng.skills: navbarNames.Rus.skills}</Nav.Link>
 
-        <Nav.Link href="/contacts">{(props.language === 'Eng') ? navbarNames.Eng.contacts : navbarNames.Rus.contacts}</Nav.Link>
+
+        <Nav.Link onClick={() => props.aboutMeChange('skills')}>{(props.language === 'Eng') ? navbarNames.Eng.skills: navbarNames.Rus.skills}</Nav.Link>
+
+        <Nav.Link onClick={() => props.aboutMeChange('contacts')}>{(props.language === 'Eng') ? navbarNames.Eng.contacts : navbarNames.Rus.contacts}</Nav.Link>
 
       </Nav>
 

@@ -2,7 +2,7 @@ import React from 'react'
 import { Table } from 'react-bootstrap'
 import { About } from '../about/about'
 
-type SkillsProps = {data: About, language: string}
+type SkillsProps = { data: About, language: string };
 
 export const Skills = (props: SkillsProps) => {
 
@@ -16,16 +16,16 @@ export const Skills = (props: SkillsProps) => {
     </tr>
   </thead>
   <tbody>
-      {props.data.Eng.mainSkills.map((item, index) => {
+      {props.data.Skills.mainSkills.map((item, index) => {
         return (
           <tr key={index}>
           <td>{item}</td>
-          <td>{props.data.Eng.otherSkills[index]}</td>
+          <td>{props.data.Skills.otherSkills[index]}</td>
         </tr>
         )
 
       })}
   </tbody>
     </Table>
-  )
-}
+  );
+};

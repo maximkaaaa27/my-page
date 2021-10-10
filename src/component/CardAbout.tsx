@@ -6,9 +6,11 @@ import { Contacts } from '../pages/Contacts'
 import { Skills } from '../pages/Skills'
 
 
-type AboutProps = { data: About, language: string, about: string }
+type AboutProps = { data: About, language: string, about: string };
 
 export const CardAbout = (props: AboutProps) => {
+
+  const dataCurrentLanguage = (props.language === 'Rus') ? props.data.Rus : props.data.Eng;
 
 
   return (
@@ -20,13 +22,13 @@ export const CardAbout = (props: AboutProps) => {
             <Card.Body>
 
               <Card.Title>
-                {(props.language === 'Rus') ? props.data.Rus.name : props.data.Eng.name}
+                {dataCurrentLanguage.name}
                 {' '} 
-                {(props.language === 'Rus') ? props.data.Rus.lastName : props.data.Eng.lastName}
+                {dataCurrentLanguage.lastName}
               </Card.Title>
               
               <Card.Text>
-              {(props.language === 'Rus') ? props.data.Rus.info : props.data.Eng.info}
+              {dataCurrentLanguage.info}
               </Card.Text>
 
             </Card.Body>
@@ -35,7 +37,7 @@ export const CardAbout = (props: AboutProps) => {
         </Col>
 
         <Col>
-        <p>{(props.language === 'Rus') ? props.data.Rus.about : props.data.Eng.about}</p>
+        <p>{dataCurrentLanguage.about}</p>
         </Col>
 
         <Col>
@@ -44,5 +46,5 @@ export const CardAbout = (props: AboutProps) => {
         
       </Row>
       </Container>
-  )
-}
+  );
+};

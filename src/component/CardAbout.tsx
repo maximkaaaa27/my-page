@@ -1,12 +1,12 @@
 import React from 'react'
 import { Col, Row, Card, Container } from 'react-bootstrap'
-import { About } from '../about/about'
+import { IAbout } from '../about/about'
 import avatar from '../about/avatar.jpg'
 import { Contacts } from '../pages/Contacts'
 import { Skills } from '../pages/Skills'
 
 
-type AboutProps = { data: About, language: string, about: string };
+type AboutProps = { data: IAbout, language: string, about: string };
 
 export const CardAbout = (props: AboutProps) => {
 

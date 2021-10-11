@@ -22,10 +22,33 @@ export type About = {
     };
 };
 
+export interface IAbout {
+  Rus: {
+    name: string;
+    lastName: string;
+    age: string;
+    about: string;
+    info: string;
+  };
+
+  Eng: {
+    name: string;
+    lastName: string;
+    age: string;
+    about: string;
+    info: string;
+  };
+
+  Skills: {
+    mainSkills: string[];
+    otherSkills: string[];
+  };
+}
 
 
 
-export const about = {
+
+export const about: IAbout = {
 
   Rus: {
     name: 'Максим',

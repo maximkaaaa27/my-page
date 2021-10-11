@@ -1,6 +1,6 @@
 import React from "react";
 import { useAccordionButton } from 'react-bootstrap/AccordionButton';
-import { Accordion, ListGroup, Image, Nav } from "react-bootstrap";
+import { Accordion, ListGroup, Nav, Image } from "react-bootstrap";
 import logoMail from '../logo/mail_logo.svg'
 import logoSkype from '../logo/skype_logo.png'
 import logoLinkedin from '../logo/linkedin_logo.svg'
@@ -40,14 +40,14 @@ export const Contacts = () => {
       <ListGroup.Item>
         <CustomToggle eventKey="1" logo={logoSkype}>Skype</CustomToggle>
           <Accordion.Collapse eventKey="1">
-            <Nav.Link href="https://join.skype.com/invite/Fok6RHsaFsfz">Добавиться в Скайп</Nav.Link>
+            <Nav.Link href="https://join.skype.com/invite/Fok6RHsaFsfz" style={{color: '#24abd4'}}>Добавиться в Скайп</Nav.Link>
           </Accordion.Collapse>    
       </ListGroup.Item>
 
       <ListGroup.Item>
         <CustomToggle eventKey="2" logo={logoMail}>My mail</CustomToggle>
           <Accordion.Collapse eventKey="2">
-              <p style={{color: 'blue', fontSize: '18px'}}>max_005_27@mail.ru</p>
+              <p style={{color: '#4169cc', fontSize: '18px'}}>max_005_27@mail.ru</p>
           </Accordion.Collapse>
       </ListGroup.Item>
 

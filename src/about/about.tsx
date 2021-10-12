@@ -1,27 +1,3 @@
-export type About = {
-
-    Rus: {
-      name: string;
-      lastName: string;
-      age: string;
-      about: string;
-      info: string;
-    };
-
-    Eng: {
-      name: string;
-      lastName: string;
-      age: string;
-      about: string;
-      info: string;
-    };
-
-    Skills: {
-      mainSkills: string[];
-      otherSkills: string[];
-    };
-};
-
 export interface IAbout {
   Rus: {
     name: string;

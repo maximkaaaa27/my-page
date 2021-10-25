@@ -30,7 +30,7 @@ export const CardAbout = (props: AboutProps) => {
               <Card.Text>
               {dataCurrentLanguage.info}
               </Card.Text>
-
+              
             </Card.Body>
           </Card>
 
@@ -38,10 +38,12 @@ export const CardAbout = (props: AboutProps) => {
 
         <Col>
         <p>{dataCurrentLanguage.about}</p>
+        <Card.Img  variant="top" src="https://www.codewars.com/users/Maximkaaaa27/badges/small" />
         </Col>
 
         <Col>
         {(props.about === 'skills') ? <Skills language={props.language} data={props.data}/> : <Contacts />}
+        
         </Col>
         
       </Row>

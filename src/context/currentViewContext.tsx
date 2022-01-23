@@ -1,4 +1,4 @@
-import React, {createContext, useReducer} from "react";
+import React, {createContext, ReactChildren, useReducer, ReactChild} from "react";
 import { Profile } from "../components/views/Profile";
 import { Skills } from "../components/views/Skills";
 import { Education } from "../components/views/Education";
@@ -55,7 +55,7 @@ const pathReducer = (state: IViewState, action: {type: string}) => {
   }
 
 
-export const ViewContextProvider = ({children}: any) => {
+export const ViewContextProvider = ({children}: {children: ReactChild | ReactChild[] | ReactChildren}) => {
   const [state, dispatch] = useReducer(pathReducer, initState);
 
 

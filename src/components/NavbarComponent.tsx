@@ -15,8 +15,8 @@ const handleSelect = (eventSelect: string | null) => {
 
 
   return (
-    <header className='p-2 bg-light'>
-      <Navbar collapseOnSelect expand='lg'>
+    
+      <Navbar collapseOnSelect expand='lg' bg='light' fixed="top">
         <Navbar.Toggle aria-controls='responsive-nav' />
         <Navbar.Collapse id='responsive-nav'>
           <Nav defaultActiveKey="profile" onSelect={(eventSelect) => handleSelect(eventSelect)}>
@@ -38,6 +38,6 @@ const handleSelect = (eventSelect: string | null) => {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-    </header>
+
   )
 }

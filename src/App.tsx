@@ -1,24 +1,23 @@
 import React, { useContext } from 'react';
 import './App.scss';
-import { CardAbout } from './components/CardAbout';
-import { NavbarComponent } from './components/NavbarComponent';
+import { Header } from './components/Header';
 import { ViewContext } from './context/currentViewContext';
+import { Footer } from './components/Footer';
+import { Container } from 'react-bootstrap';
+
 
 function App() {
 
   const currentView = useContext(ViewContext);
 
-
   return (
     <>
-      <NavbarComponent />
-      {currentView.render}
-      <CardAbout />
-
-      <footer>
-        <p id="copyright"> Maksim Dryutov © 2021</p>
-      </footer>
-      </>
+      <Header />
+      <Container className='p-5'>     
+          {currentView.render}
+      </Container>
+      <Footer />
+    </>
   );
 };
 

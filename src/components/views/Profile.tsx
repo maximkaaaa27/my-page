@@ -8,7 +8,7 @@ export const Profile = () => {
     <Row>
       <Col className="border rounded overflow-hidden shadow-sm d-flex">
         <div className="p-2 d-none d-lg-block" >
-          <Image alt="ava-pic" src={avaPic} fluid rounded />
+          <Image alt="ava-pic" className="w-75" src={avaPic} fluid rounded />
         </div>
         <div className="p-3 text-center">
           <h2>Дрютов Максим</h2>

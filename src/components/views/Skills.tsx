@@ -15,7 +15,7 @@ export const Skills = () => {
   return (
   <>
     <div className="mb-4 bg-light rounded-3 d-flex flex-column align-items-center">
-      <div className="display-5 fw-bold my-4">
+      <div className="display-4 fw-bold my-4">
         Основные
       </div>
         <Image rounded src={jslogo} className="w-50 pb-3 " />
@@ -26,7 +26,7 @@ export const Skills = () => {
     <Row xs={1} lg={2}>
       <Col>
         <div className="md-6 bg-light rounded-3">
-        <div className="display-6 fw-bold my-4 text-center">
+        <div className="display-5 fw-bold my-4 text-center">
         Не менее важные
         </div>
         <Image rounded src={nodeJslogo} className="w-50 pb-3 " />

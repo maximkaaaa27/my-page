@@ -1,7 +1,21 @@
 import React from "react";
+import { useIcons } from "../../assets/icons";
+
+
+
 
 export const Contacts = () => {
+
+  const github = useIcons('github');
+  const linkedin = useIcons('linkedin');
+  const mail = useIcons('mail');
+  const skype = useIcons('skype')
   return (
-    <h2>Contacts</h2>
+    <>
+      {github}
+      {linkedin}
+      {mail}
+      {skype}
+    </>
   )
 }

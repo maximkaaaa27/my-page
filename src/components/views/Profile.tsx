@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Image, Row } from "react-bootstrap";
-import avaPic from "./ava_img.jpg";
+import avaPic from "../../assets/ava_img.jpg";
 
 
 export const Profile = () => {

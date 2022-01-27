@@ -1,15 +1,15 @@
 import React from "react";
 import { Col, Image, Row } from "react-bootstrap";
-import jslogo from '../../logo/html_css_js_logo.png';
-import tslogo from '../../logo/TypeScript_Logo.svg';
-import reactlogo from '../../logo/react-logo.svg';
-import reduxlogo from '../../logo/Redux_Logo.png';
-import nodeJslogo from '../../logo/node.js_logo.svg';
-import firebaselogo from '../../logo/firebase_logo.svg';
-import mongodblogo from '../../logo/mongoDB_logo.svg';
-import expresslogo from '../../logo/expressjs_logo.png';
-import lisplogo from '../../logo/lisp-logo.jpg';
-import delphilogo from '../../logo/delphi-logo.jpg';
+import jslogo from '../../assets/logo/html_css_js_logo.png';
+import tslogo from '../../assets/logo/TypeScript_Logo.svg';
+import reactlogo from '../../assets/logo/react-logo.svg';
+import reduxlogo from '../../assets/logo/Redux_Logo.png';
+import nodeJslogo from '../../assets/logo/node.js_logo.svg';
+import firebaselogo from '../../assets/logo/firebase_logo.svg';
+import mongodblogo from '../../assets/logo/mongoDB_logo.svg';
+import expresslogo from '../../assets/logo/expressjs_logo.png';
+import lisplogo from '../../assets/logo/lisp-logo.jpg';
+import delphilogo from '../../assets/logo/delphi-logo.jpg';
 
 export const Skills = () => {
   return (

@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Header />
-      <Container className='p-5'>     
+      <Container className='mt-5 p-5'>     
           {currentView.render}
       </Container>
       <Footer />

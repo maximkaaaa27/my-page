@@ -11,8 +11,7 @@ import expresslogo from '../../assets/logo/expressjs_logo.png';
 import lisplogo from '../../assets/logo/lisp-logo.jpg';
 import delphilogo from '../../assets/logo/delphi-logo.jpg';
 
-export const Skills = () => {
-  return (
+export const Skills = () => (
   <>
     <div className="mb-4 bg-light rounded-3 d-flex flex-column align-items-center">
       <div className="display-4 fw-bold my-4">
@@ -44,8 +43,6 @@ export const Skills = () => {
         <Image rounded src={lisplogo} className="w-50 pb-3 " />
         </div>
       </Col>
-
     </Row>
   </>
-  )
-}
+)

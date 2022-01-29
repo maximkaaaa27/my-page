@@ -24,8 +24,7 @@ const handleSelect = (eventSelect: string | null) => {
       <Navbar collapseOnSelect expand='lg' bg='light' fixed="top">
         <Navbar.Toggle aria-controls='responsive-nav'  className="m-2"/>
         <Navbar.Collapse id='responsive-nav' className="p-2">
-          <Nav
-          
+          <Nav  
           defaultActiveKey="profile" 
           onSelect={(eventSelect) => handleSelect(eventSelect)}>
             <Nav.Item>

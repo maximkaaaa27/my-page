@@ -3,8 +3,7 @@ import { Col, Image, Row } from "react-bootstrap";
 import avaPic from "../../assets/ava_img.jpg";
 
 
-export const Profile = () => {
-  return (
+export const Profile = () => (
     <Row>
       <Col className="border rounded overflow-hidden shadow-sm d-flex">
         <div className="p-2 d-none d-lg-block" >
@@ -18,7 +17,5 @@ export const Profile = () => {
           </p>
         </div>
     </Col>
-  </Row>
-    
-  )
-}
+  </Row> 
+)
